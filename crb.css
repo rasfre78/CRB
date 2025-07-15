@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0A1128; /* Azul oscuro del borde de la imagen */
+    color: #f0f0f0; /* Texto claro para contraste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Pequeño padding para móviles */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+.container {
+    background-color: #32446A; /* Azul más claro del centro de la imagen */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    width: 100%;
+    max-width: 550px; /* Aumentado para mejor legibilidad */
+    text-align: center;
+    border: 2px solid #5D9CEC; /* Borde sutil con el azul brillante */
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.title-logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin: 0 15px; /* Space between logo and title */
+}
+
+h1 {
+    color: #FFFFFF; /* Blanco puro para el título */
+    font-size: 2.2em; /* Título un poco más grande */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin: 0; /* Remove default h1 margin to align with flexbox */
+}
+
+/* Nuevos estilos para agrupar ícono y botón */
+.button-group {
+    display: flex;
+    align-items: center; /* Alinear verticalmente ícono y botón */
+    justify-content: center; /* Centrar el grupo completo */
+    margin: 15px auto; /* Centrar el grupo y añadir espacio entre ellos */
+    width: fit-content; /* Ajustar ancho al contenido */
+}
+
+/* Estilos para los botones de acceso directo */
+.social-button {
+    background-color: #5D9CEC; /* Azul brillante para el botón */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-grow: 1; /* Permitir que el botón crezca para ocupar el espacio restante */
+    max-width: 300px; /* Limitar el ancho del botón */
+}
+
+.social-button:hover {
+    background-color: #7BB8F7; /* Azul más claro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeño efecto hover */
+}
+
+/* Estilos para los íconos de los botones */
+.button-icon {
+    width: 50px; /* Tamaño del ícono, puedes ajustarlo */
+    height: 50px; /* Mantener proporción */
+    margin-right: 15px; /* Espacio entre el ícono y el botón */
+    border-radius: 50%; /* Hacer las esquinas redondeadas (un círculo perfecto para 50%) */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    flex-shrink: 0; /* Evita que el ícono se encoja en pantallas pequeñas */
+}
+
+/* Media Queries para Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .title-wrapper {
+        flex-direction: column; /* Stack logos and title on small screens */
+    }
+
+    .title-logo {
+        margin: 10px 0; /* Adjust margin for stacked logos */
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .button-group {
+        flex-direction: column; /* Apilar ícono y botón en pantallas pequeñas */
+        margin: 10px auto; /* Ajustar margen para grupos apilados */
+    }
+
+    .button-icon {
+        width: 35px;
+        height: 35px;
+        margin-right: 0; /* Eliminar margen derecho cuando están apilados */
+        margin-bottom: 8px; /* Añadir margen inferior al ícono cuando están apilados */
+    }
+
+    .social-button {
+        padding: 10px 20px;
+        font-size: 1em;
+        width: 100%; /* El botón ocupa todo el ancho disponible en móvil */
+        max-width: none; /* Eliminar límite de ancho */
+    }
+}
