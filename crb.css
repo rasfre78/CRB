@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 20px; /* Pequeño padding para móviles */
     box-sizing: border-box; /* Incluye padding en el ancho total */
+    position: relative; /* Added for positioning the counter */
 }
 
 .container {
@@ -81,6 +82,19 @@ h1 {
     flex-shrink: 0; /* Evita que el ícono se encoja en pantallas pequeñas */
 }
 
+/* Styles for the visit counter */
+#visit-counter {
+    position: absolute; /* Position it relative to the body */
+    bottom: 10px; /* 10px from the bottom */
+    right: 10px; /* 10px from the right */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    color: #FFFFFF; /* White text */
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
 /* Media Queries para Responsiveness */
 @media (max-width: 600px) {
     .container {
@@ -117,5 +131,12 @@ h1 {
         font-size: 1em;
         width: 100%; /* El botón ocupa todo el ancho disponible en móvil */
         max-width: none; /* Eliminar límite de ancho */
+    }
+
+    #visit-counter {
+        bottom: 5px;
+        right: 5px;
+        padding: 6px 10px;
+        font-size: 0.8em;
     }
 }
